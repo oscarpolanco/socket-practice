@@ -176,3 +176,10 @@ io.on("connection", socket => {
 
 - [Add a event acknowledge message](https://github.com/oscarpolanco/socket-practice/pull/8/commits/ee6af889a55d5d7dc38f7c3a381e0c60571e7cff)
 - [Use event acknowledge to filter bad words](https://github.com/oscarpolanco/socket-practice/pull/8/commits/e89e746dd5c6f69da272c3af8475cd35bf4b9a5a)
+
+# Button and form states
+
+## List of commits
+- [Add form and button logic when the user send a message](https://github.com/oscarpolanco/socket-practice/pull/9/commits/e6ac8252152da77bde966257a5928d8132fe72ec)
+- [Add logic to the setLocation button when is press](https://github.com/oscarpolanco/socket-practice/pull/9/commits/30796725ede529ee67718ee75bb81904c625a77e)
+
