@@ -4,6 +4,7 @@ const socket = io();
 const $messageForm = document.querySelector("#message-form");
 const $messageFormInput = $messageForm.querySelector('input');
 const $messageFormButton = $messageForm.querySelector('button');
+const $sendLocation = document.querySelector("#send-location");
 
 socket.on("message", message => {
   console.log(message);
@@ -29,10 +30,12 @@ $messageForm.addEventListener("submit", e => {
   });
 });
 
-document.querySelector("#send-location").addEventListener("click", () => {
+$sendLocation.addEventListener("click", () => {
   if (!navigator.geolocation) {
     return alert("Geolocation is not supported by your browser");
   }
+
+  $sendLocation.setAttribute('disabled', 'disabled');
 
   navigator.geolocation.getCurrentPosition(position => {
     socket.emit(
@@ -42,6 +45,7 @@ document.querySelector("#send-location").addEventListener("click", () => {
         longitude: position.coords.longitude
       },
       () => {
+        $sendLocation.removeAttribute('disabled');
         console.log("Location shared");
       }
     );
