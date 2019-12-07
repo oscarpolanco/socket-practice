@@ -183,3 +183,43 @@ io.on("connection", socket => {
 - [Add form and button logic when the user send a message](https://github.com/oscarpolanco/socket-practice/pull/9/commits/e6ac8252152da77bde966257a5928d8132fe72ec)
 - [Add logic to the setLocation button when is press](https://github.com/oscarpolanco/socket-practice/pull/9/commits/30796725ede529ee67718ee75bb81904c625a77e)
 
+# Render library of the example
+
+We are using `mustache` for this example that will help users to quickly have a dynamic template without a lot of configuration.
+
+To begin with `mustache` we add the `cdn` to the `index.html` file.
+`<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.0.1/mustache.min.js"></script>`
+
+Create an container for the content that you will render on your html.
+`<div id="content-container"></div>`
+
+Then create your template using an `id` to identify it.
+```js
+<script id="my-template" type="text/html">
+  <div>
+    <p>text</p>
+  </div>
+</script>
+```
+
+Then on your `js` file; target the elments that you need from the `html` file in this case the `script` tag that you create and the `content-container` then use the `Mustache` object and it render function `render`,
+```js
+const $container = document.querySelector('#content-container');
+const myTemplate = document.querySelector("#my-template").innerHTML;
+
+const html = Mustache.render(myTemplate, {
+    data
+});
+  $container.insertAdjacentHTML('beforeend', html);
+```
+
+To have dynamic values we send an object as second parameter on the `render` function and on the `script` tag we need to put double square bracket `{{}}` with the property name inside of it.
+```js
+// html
+<script id="my-template" type="text/html">
+  <div>
+    <p>{{data}}</p>
+  </div>
+</script>
+```
+
