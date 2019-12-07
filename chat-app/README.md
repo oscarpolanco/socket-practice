@@ -148,3 +148,31 @@ io.on("connection", socket => {
 
 - [Add a broadcast event for the users that join the chat](https://github.com/oscarpolanco/socket-practice/pull/6/commits/0fb772b1c5f7967a4f32ec1540f4d147caba79a5)
 - [Add disconnect event](https://github.com/oscarpolanco/socket-practice/pull/6/commits/34dffadf6f611222180856fee7122ef1d93cfd08)
+
+# Event acknowledge
+
+We send an event and we aren't quite sure that the event was delivered successfully so we send some kind of data to acknowledge that we use that event.
+
+To have this functionality we just need to send another parameter on our event(callback) that will run when we receive the event.
+
+```js
+// client
+// dataSend = "Delivered!"
+socket.emit("eventName", data, (dataSend) => {
+    console.log("Message delivered", dataSend);
+  });
+}
+
+// server
+io.on("connection", socket => {
+  socket.on("eventName", (data,  callback) => {
+    io.emit("eventName", data);
+    callback("Delivered!");
+  });
+});
+```
+
+## List of commits
+
+- [Add a event acknowledge message](https://github.com/oscarpolanco/socket-practice/pull/8/commits/ee6af889a55d5d7dc38f7c3a381e0c60571e7cff)
+- [Use event acknowledge to filter bad words](https://github.com/oscarpolanco/socket-practice/pull/8/commits/e89e746dd5c6f69da272c3af8475cd35bf4b9a5a)
