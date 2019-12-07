@@ -124,3 +124,27 @@ On the client, we need to store the return value from the `io` function to use i
 - [Send data from the client to the server](https://github.com/oscarpolanco/socket-practice/pull/4/commits/e866f56bb8573bffef5a87496dc0d612a26c1eb7)
 - [Emit an event from the client, catch the event from the server and update value from the server](https://github.com/oscarpolanco/socket-practice/pull/4/commits/6c722ab1894122169a087bd7c7ffcd49c706f4c3)
 - [Emit the count event to all connections](https://github.com/oscarpolanco/socket-practice/pull/4/commits/0d21d6bbba2eaad968f6136d345c5be4fb379b85)
+
+# Broadcast and disconnect events
+
+## Broadcast event
+
+When you want to send an event to all connections except the current one you need to use `broadcast`.
+`socket.broadcast.emit("eventName", data);`
+
+## Disconnect event
+
+To detect when the connection close we need the build event `disconnect` inside the `connection` event.
+
+```js
+io.on("connection", socket => {
+  socket.on("disconnect", () => {
+    io.emit("eventName", data);
+  });
+});
+```
+
+## List of commit
+
+- [Add a broadcast event for the users that join the chat](https://github.com/oscarpolanco/socket-practice/pull/6/commits/0fb772b1c5f7967a4f32ec1540f4d147caba79a5)
+- [Add disconnect event](https://github.com/oscarpolanco/socket-practice/pull/6/commits/34dffadf6f611222180856fee7122ef1d93cfd08)
