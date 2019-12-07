@@ -223,3 +223,12 @@ To have dynamic values we send an object as second parameter on the `render` fun
 </script>
 ```
 
+## List of commits (Rendering the location message)
+
+- [Render the messages using mustache](https://github.com/oscarpolanco/socket-practice/pull/10/commits/4018b9de0729f22cf7bf4afabcf8b05a6330ee63)
+- [Add a dynamic template for the locatiion functionallity](https://github.com/oscarpolanco/socket-practice/pull/11/commits/8c8755e11d72c391bd67ddfa856784824a450de6)
+
+## List of commits (Rendering the location message)
+
+- [Separate the location message from the normal message event](https://github.com/oscarpolanco/socket-practice/pull/11/commits/9a34de8b7fbc21e74757b28e40ca621203cb80a6)
+- [Add a dynamic template for the locatiion functionallity](https://github.com/oscarpolanco/socket-practice/pull/11/commits/8c8755e11d72c391bd67ddfa856784824a450de6)
