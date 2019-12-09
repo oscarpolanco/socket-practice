@@ -43,14 +43,27 @@ const removeUser = (id) => {
     }
 }
 
+const getUser = (id) => {
+    return users.find((user) => user.id === id);
+}
+
 addUser({
     id: 22,
     username: 'Andrew   ',
     room: 'South Philly'
 });
 
-console.log(users);
+addUser({
+    id: 42,
+    username: 'Mike',
+    room: 'South Philly'
+});
 
-const removedUser = removeUser(22);
-console.log(removedUser);
-console.log(users);
+addUser({
+    id: 32,
+    username: 'Andrew   ',
+    room: 'Center city'
+});
+
+const user = getUser(21);
+console.log(user);
