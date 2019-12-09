@@ -251,3 +251,10 @@ We use `moment.js` to format the time.
 ## List of commits
 [Add style and update the page content](https://github.com/oscarpolanco/socket-practice/pull/14/commits/532d02ab3af932658f079ebafe89e9648c9610df)
 
+# Join page
+
+At this point you need to fill the homepage form to access the chat room
+
+## List of commits
+
+- [Add a join page and create the chat page with the old homepage content](https://github.com/oscarpolanco/socket-practice/pull/15/commits/765576c6b9b6f44265ba1729229be4a1835fc504)
