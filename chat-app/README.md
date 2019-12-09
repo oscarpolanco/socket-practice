@@ -305,3 +305,15 @@ socket.on("join", ({ username, room}) => {
 - [Parse the room and username from the url and create a event to send this values to the server](https://github.com/oscarpolanco/socket-practice/pull/16/commits/523b1f6e5431d0b81c1cad63c2428548855597c1)
 
 - [Add the join event, use socket to join a specific room and send the welcome message to a specific room](https://github.com/oscarpolanco/socket-practice/pull/16/commits/e9a8f3645361d6d6d3b544d7124a4bf607755366)
+
+# Storing user
+
+Create a couple of functions to manage the users in the different rules
+
+- [Add a function to store the users on a specific room](https://github.com/oscarpolanco/socket-practice/pull/17/commits/f63fc093d1a5a022379f839eb67e43b42de89654)
+
+- [Create a remove user function](https://github.com/oscarpolanco/socket-practice/pull/17/commits/376ccb7a241cb23657314123aeb75bdc1fa65db4)
+
+- [Add a getUser function](https://github.com/oscarpolanco/socket-practice/pull/17/commits/8d1bdafe136d45403e7a1d453245b83d77a5fa67)
+
+- [Add getUser and getUserInRoom function](https://github.com/oscarpolanco/socket-practice/pull/17/commits/4f6cdb8add1efde7d629c10c88649d0a4fd034eb)
