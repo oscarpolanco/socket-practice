@@ -334,3 +334,9 @@ Here we gonna have the `username` for the sender of a message and `admin` messag
 - [Add to the sendMessage/sendLocation event the getUser function](https://github.com/oscarpolanco/socket-practice/pull/19/commits/c855016af7a52433b88f4427decd383a8ee520ff)
 - [Add username when you send a message and the admin messages](https://github.com/oscarpolanco/socket-practice/pull/19/commits/3eb4b170a439232476f4e928bfe1395d27c283bd)
 - [Remove the autocomplite of the message input](https://github.com/oscarpolanco/socket-practice/pull/19/commits/9ac199bfa3454196694cff53e8e256003d6c0f97)
+
+# Rendering user list
+
+## List of commits
+
+- [Create a sidebar template an populate with data](https://github.com/oscarpolanco/socket-practice/pull/20/commits/d12d0b393af10ee4120bcc21885c52019da3afc3)
