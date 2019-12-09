@@ -232,3 +232,17 @@ To have dynamic values we send an object as second parameter on the `render` fun
 
 - [Separate the location message from the normal message event](https://github.com/oscarpolanco/socket-practice/pull/11/commits/9a34de8b7fbc21e74757b28e40ca621203cb80a6)
 - [Add a dynamic template for the locatiion functionallity](https://github.com/oscarpolanco/socket-practice/pull/11/commits/8c8755e11d72c391bd67ddfa856784824a450de6)
+
+# Working with time
+
+We use `moment.js` to format the time.
+
+## List of commits(Message event and template)
+
+- [Add a timestamp to the message template and the message event](https://github.com/oscarpolanco/socket-practice/pull/12/commits/837ae61e124278b7e79e2d2887e6dc05a8ca7894)
+- [Use moment to give format to our timestamp](https://github.com/oscarpolanco/socket-practice/pull/12/commits/4bfdce76cf482d99c5c135ee6b6fcd55ecc63278)
+
+## List of commits(Location event and template)
+
+- [Add a timestamp to the location template and event](https://github.com/oscarpolanco/socket-practice/pull/13/commits/5b1405a20acaf1746b76c3ade762a6aef6c963e3)
+
