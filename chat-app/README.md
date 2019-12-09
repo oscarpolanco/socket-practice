@@ -324,3 +324,13 @@ Create a couple of functions to manage the users in the different rules
 
 - [Add the addUser function to the server](https://github.com/oscarpolanco/socket-practice/pull/18/commits/2413621076b7f79043da6a65ea8e86e55eb5f8b0)
 - [Add the remove user function when a user leave the room](https://github.com/oscarpolanco/socket-practice/pull/18/commits/24e0ff9126813c63fcbdf4297088e56d715ac402)
+
+# Sending messages to rooms
+
+Here we gonna have the `username` for the sender of a message and `admin` messages on the chat
+
+## List of commits
+
+- [Add to the sendMessage/sendLocation event the getUser function](https://github.com/oscarpolanco/socket-practice/pull/19/commits/c855016af7a52433b88f4427decd383a8ee520ff)
+- [Add username when you send a message and the admin messages](https://github.com/oscarpolanco/socket-practice/pull/19/commits/3eb4b170a439232476f4e928bfe1395d27c283bd)
+- [Remove the autocomplite of the message input](https://github.com/oscarpolanco/socket-practice/pull/19/commits/9ac199bfa3454196694cff53e8e256003d6c0f97)
