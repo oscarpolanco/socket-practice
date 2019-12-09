@@ -22,7 +22,7 @@ io.on("connection", socket => {
     const { error, user } = addUser({ id: socket.id, username, room });
 
     if (error) {
-        callback(error);
+        return callback(error);
     }
 
     socket.join(user.room);
@@ -53,7 +53,11 @@ io.on("connection", socket => {
   });
 
   socket.on("disconnect", () => {
-    io.emit("message", generateMessage("A user has left!"));
+    const user = removeUser(socket.id);
+
+    if (user) {
+        io.to(user.room).emit("message", generateMessage(`${user.username} has left!`));
+    }
   });
 });
 
