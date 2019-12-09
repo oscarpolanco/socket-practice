@@ -246,3 +246,8 @@ We use `moment.js` to format the time.
 
 - [Add a timestamp to the location template and event](https://github.com/oscarpolanco/socket-practice/pull/13/commits/5b1405a20acaf1746b76c3ade762a6aef6c963e3)
 
+# Styling chat app
+
+## List of commits
+[Add style and update the page content](https://github.com/oscarpolanco/socket-practice/pull/14/commits/532d02ab3af932658f079ebafe89e9648c9610df)
+
