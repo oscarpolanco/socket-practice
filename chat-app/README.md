@@ -317,3 +317,10 @@ Create a couple of functions to manage the users in the different rules
 - [Add a getUser function](https://github.com/oscarpolanco/socket-practice/pull/17/commits/8d1bdafe136d45403e7a1d453245b83d77a5fa67)
 
 - [Add getUser and getUserInRoom function](https://github.com/oscarpolanco/socket-practice/pull/17/commits/4f6cdb8add1efde7d629c10c88649d0a4fd034eb)
+
+# Tracking user joining and leaving
+
+## List of commits
+
+- [Add the addUser function to the server](https://github.com/oscarpolanco/socket-practice/pull/18/commits/2413621076b7f79043da6a65ea8e86e55eb5f8b0)
+- [Add the remove user function when a user leave the room](https://github.com/oscarpolanco/socket-practice/pull/18/commits/24e0ff9126813c63fcbdf4297088e56d715ac402)

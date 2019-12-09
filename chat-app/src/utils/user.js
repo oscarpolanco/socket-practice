@@ -1,6 +1,6 @@
 const users = [];
 
-const addUser = ({ id, username, room}) => {
+const addUser = ({ id, username, room }) => {
     // Clean the data
     username = username.trim().toLowerCase();
     room = room.trim().toLowerCase();
@@ -14,7 +14,7 @@ const addUser = ({ id, username, room}) => {
 
     // Check for existing user
     const existingUser = users.find((user) => {
-        return user.room === room && user.username === username;
+        return user.room === room && user.username === username
     });
 
     // Validate username
@@ -52,7 +52,7 @@ const getUsersInRoom = (room) => {
     return users.filter((user) => user.room === room);
 }
 
-module.export = {
+module.exports = {
     addUser,
     removeUser,
     getUser,
