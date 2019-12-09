@@ -340,3 +340,9 @@ Here we gonna have the `username` for the sender of a message and `admin` messag
 ## List of commits
 
 - [Create a sidebar template an populate with data](https://github.com/oscarpolanco/socket-practice/pull/20/commits/d12d0b393af10ee4120bcc21885c52019da3afc3)
+
+# Automatic scrolling
+
+## List of commits
+
+- [Add auto scrolling the messages when you are at the button of the messages](https://github.com/oscarpolanco/socket-practice/pull/21/commits/e89e28e00384ff8e06719239541e9d69a5cfa8ad)
