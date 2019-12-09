@@ -258,3 +258,50 @@ At this point you need to fill the homepage form to access the chat room
 ## List of commits
 
 - [Add a join page and create the chat page with the old homepage content](https://github.com/oscarpolanco/socket-practice/pull/15/commits/765576c6b9b6f44265ba1729229be4a1835fc504)
+
+# Socket.io rooms
+
+We need that the events go to a specific `room` since we add a `join` page where you can enter a specific `room` so `socket.io` allows us to do this with the following methods.
+
+## Parse query parameters
+
+First we `parse` the `query` parameters that we send when the user submit information on the `join` page using the `queryString` library
+`const { queryParameter1, queryParameter2 } = Qs.parse(location.search, { ignoreQueryPrefix: true});`
+
+A second object is an options object; in this case, is to ignore the `?` on the string.
+
+## Emit and receive the room to the server
+
+### Emit the event
+
+Then we create a event to send values to the server throw a event.
+`socket.emit('join', { queryParameter1, queryParameter2 });`
+
+### Receive the event and join the room
+
+Use the `on` method to catch that event on the server and use the values of the query parameter.
+```js
+socket.on("join", ({ queryParameter1, queryParameter2 }) => {
+  socket.join(queryParameter1);
+});
+```
+
+`socket.join` allow us to `join` a giving room just specify the name sending a string.
+
+### Emit events to a specific room
+
+To emit an event to a specific `room` you just need to use the `to` method which only needs to specify the name of the `room` in a string.
+
+```js
+socket.on("join", ({ username, room}) => {
+  socket.join(room);
+
+  socket.broadcast.to(room).emit("message", generateMessage(`${username} has joined!`));
+});
+```
+
+## List of commits
+
+- [Parse the room and username from the url and create a event to send this values to the server](https://github.com/oscarpolanco/socket-practice/pull/16/commits/523b1f6e5431d0b81c1cad63c2428548855597c1)
+
+- [Add the join event, use socket to join a specific room and send the welcome message to a specific room](https://github.com/oscarpolanco/socket-practice/pull/16/commits/e9a8f3645361d6d6d3b544d7124a4bf607755366)
